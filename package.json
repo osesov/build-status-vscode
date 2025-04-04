@@ -1,0 +1,40 @@
+{
+  "name": "build-status-watcher",
+  "displayName": "Build Status Watcher",
+  "description": "Displays build status in the status bar by reading a status file.",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.clearBuildStatus",
+        "title": "Clear Build Status"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package",
+    "prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/vscode": "^1.98.0",
+    "typescript": "^5.8.2",
+    "vsce": "^2.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:osesov/build-status-vscode.git"
+  }
+}
