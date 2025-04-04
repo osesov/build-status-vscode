@@ -24,7 +24,7 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
-    "package": "vsce package",
+    "package": "vsce package --allow-star-activation",
     "prepublish": "npm run compile"
   },
   "devDependencies": {
